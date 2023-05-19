@@ -1,0 +1,6 @@
+{
+  "exec": "npm run start",
+  "watch": ["./routes", "./server.js" ],
+  "legacyWatch": true,
+  "ext": "js, html, css, json"
+}
