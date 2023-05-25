@@ -6,7 +6,7 @@ services:
     ports:
       - 5173:5173
     volumes:
-      - ./client:/app
+      - ./apps/client:/app
       # https://stackoverflow.com/a/37898591
       # exclude node_modules due to Vite error
       - /app/node_modules/
@@ -18,6 +18,6 @@ services:
     ports:
       - 8081:8081
     volumes:
-      - ./server:/app
+      - ./apps/server:/app
     environment:
       - PORT=8081

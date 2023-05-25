@@ -1,5 +1,5 @@
 {
-  "name": "app_srv",
+  "name": "server",
   "version": "1.0.0",
   "description": "Nodejs server",
   "author": "Constantin Lehenmeier",
