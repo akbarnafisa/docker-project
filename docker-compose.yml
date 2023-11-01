@@ -2,22 +2,23 @@ version: "3.8"
 
 services:
   client:
-    build: ./client
+    build: ./apps/client
     ports:
       - 5173:5173
     volumes:
-      - ./apps/client:/app
+      - ./apps/client:/app/client
       # https://stackoverflow.com/a/37898591
       # exclude node_modules due to Vite error
-      - /app/node_modules/
+      - /app/client/node_modules/
     environment:
-      - API_URL=http://localhost:8081/
+      - API_URL=http://localhost:3000/
 
   server:
-    build: ./server
+    build: ./apps/server
     ports:
-      - 8081:8081
+      - 3000:3000
     volumes:
-      - ./apps/server:/app
+      - ./apps/server:/app/server
+      - /app/server/node_modules/
     environment:
-      - PORT=8081
+      - PORT=3000

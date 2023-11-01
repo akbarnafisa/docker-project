@@ -1,11 +1,11 @@
 FROM node:16
 
-WORKDIR /app
+WORKDIR /app/client
 
-COPY package*.json  yarn.lock ./
+COPY package*.json ./
 
-RUN yarn
+RUN npm i
 
 COPY . .
 
-CMD [ "yarn", "dev", "--host" ]
+CMD [ "npm", "run", "dev", "--host" ]
